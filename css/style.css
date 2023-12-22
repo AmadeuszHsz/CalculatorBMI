@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2? Family= Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1100;1300;1400 & display=swap');
+body {
+    background: #fff;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.header {
+    background: rgba(34, 0, 255, 0.1);
+    color: #fff;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+}
+
+.header .logo {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header .logo img {
+    height: 100px;
+    width: auto;
+}
+.header .menu {
+    flex: 8;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+}
+.header .social {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.header .social i {
+    font-size: 2rem;
+    ;
+}
+
+.header .social a,
+header .social a:visited {
+    color: white;
+}
+
+.header .social a:hover i.fa-facebook {
+    color: blue;
+}
+
+.header .social a:hover i.fa-youtube {
+    color: red;
+}
+.baner{
+    background-image: url(../img/tlo.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+
+.baner .pole{
+    width: 600px;
+    height: 400px;
+    background: rgba(0, 0, 0, 0.5);
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    padding: 20px;
+}
+.baner .pole h1{
+    font-weight:100;
+}
+.baner .pole a{
+    width: 100%;
+}
+button {
+
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 10px;
+    border: none;
+    background-color: #3F51B5;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 5px;
+    width: 100%;
+
+}
+
+.full {
+    padding-top: 100px;
+    height: calc(100vh - 100px);}
+
+input {
+    box-sizing: border-box;
+    width: 200px;
+    padding: 10px;
+    margin: 10px 0; 
+    border: 2px solid #eee;
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+}
+button:hover {background-color: #777c97;}
+button:focus {color: #989baf;}
+button:active {box-shadow: inset 0 0 5px black;}
