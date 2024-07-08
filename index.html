@@ -19,16 +19,10 @@
   </head>
   <body>
     <div class="header">
-      <div class="logo">Amadeusz</div>
+      <div class="logo">Amadeusz Butkiewicz</div>
 
       <div class="menu"></div>
       <div class="social">
-        <a
-          href="https://youtu.be/dQw4w9WgXcQ?si=9Qa8qXDPFTMHyJhu"
-          target="_blank"
-        >
-          <i class="fa-brands fa-facebook"></i
-        ></a>
         <a
           href="https://youtu.be/dQw4w9WgXcQ?si=9Qa8qXDPFTMHyJhu"
           target="_blank"
@@ -39,17 +33,63 @@
     </div>
     <div class="baner full">
       <div class="pole">
-        <h1>Wpisz parametry śmieciu</h1>
+        <h1>Kalkulator BMI</h1>
         <form action="...">
-          <input type="text" name="nazwa" placeholder="Waga" />
+          <label for="numer">Wprowadź Waga (kg):</label>
+          <input type="number" name="numer" placeholder="Waga" id="Waga" />
         </form>
         <form action="...">
-          <input type="text" name="nazwa" placeholder="Wiek" />
+          <label for="Wzrost">Wprowadź Wzrost (cm):</label>
+          <input type="number" name="Wzrost" placeholder="Wzrost" id="Wzrost" />
         </form>
-        <a href="https://youtu.be/dQw4w9WgXcQ?si=9Qa8qXDPFTMHyJhu">
-          <button>Oblicz</button>
+        <div id="wynik"></div>
+        <a>
+          <button onclick="wykonajDzialanie()">Oblicz</button>
         </a>
       </div>
     </div>
+    <script>
+      function wykonajDzialanie() {
+        var poleLiczba1 = document.getElementById("Wzrost");
+        var poleLiczba2 = document.getElementById("Waga");
+
+        var wartoscLiczba1 = parseFloat(poleLiczba1.value) / 100;
+        var wartoscLiczba2 = parseFloat(poleLiczba2.value);
+
+        if (isNaN(wartoscLiczba1) || isNaN(wartoscLiczba2)) {
+          alert("Wprowadź poprawne liczby!");
+          return;
+        }
+
+        var odczyt = wartoscLiczba2 / (wartoscLiczba1 * wartoscLiczba1);
+        var wynik = odczyt.toFixed(2);
+        if (wynik < 16) {
+          document.getElementById("wynik").innerHTML =
+            "Wygłodzenie BMI: " + wynik;
+        } else if (wynik >= 16 && wynik <= 17) {
+          document.getElementById("wynik").innerHTML =
+            "Wychudzenie BMI: " + wynik;
+        } else if (wynik > 17 && wynik <= 18.5) {
+          document.getElementById("wynik").innerHTML =
+            "Niedowaga BMI: " + wynik;
+        } else if (wynik > 18.5 && wynik <= 25) {
+          document.getElementById("wynik").innerHTML =
+            "Wartość w normie BMI: " + wynik;
+        } else if (wynik > 25 && wynik <= 30) {
+          document.getElementById("wynik").innerHTML = "Nadwaga BMI: " + wynik;
+        } else if (wynik > 30 && wynik <= 35) {
+          document.getElementById("wynik").innerHTML =
+            "1 stopień otyłości BMI: " + wynik;
+        } else if (wynik > 35 && wynik <= 40) {
+          document.getElementById("wynik").innerHTML =
+            "2 stopień otyłości BMI: " + wynik;
+        } else {
+          document.getElementById("wynik").innerHTML =
+            "3 stopień otyłości BMI: " + wynik;
+        }
+
+        return;
+      }
+    </script>
   </body>
 </html>

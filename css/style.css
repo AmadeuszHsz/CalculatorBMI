@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2? Family= Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1100;1300;1400 & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400&family=Sevillana&display=swap');
 body {
     background: #fff;
     margin: 0;
@@ -6,7 +6,7 @@ body {
 }
 
 .header {
-    background: rgba(34, 0, 255, 0.1);
+    background: rgba(34, 0, 255, 0.0);
     color: #fff;
     height: 100px;
     width: 100%;
@@ -23,6 +23,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 200%;
+    font-weight:100;
 }
 .header .logo img {
     height: 100px;
@@ -57,10 +59,6 @@ header .social a:visited {
     color: white;
 }
 
-.header .social a:hover i.fa-facebook {
-    color: blue;
-}
-
 .header .social a:hover i.fa-youtube {
     color: red;
 }
@@ -73,7 +71,6 @@ header .social a:visited {
     display: flex;
     justify-content: center;
 }
-
 
 .baner .pole{
     width: 600px;
@@ -106,6 +103,9 @@ button {
 
 }
 
+label {
+    display: block;
+}
 .full {
     padding-top: 100px;
     height: calc(100vh - 100px);}
@@ -119,6 +119,12 @@ input {
     box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
     border-radius: 10px;
 }
-button:hover {background-color: #777c97;}
-button:focus {color: #989baf;}
+button:hover {background-color: rgb(52, 52, 191); box-shadow:inset 0 0 5px grey;}
+button:focus {color: #5561ac;}
 button:active {box-shadow: inset 0 0 5px black;}
+.stopka {
+    background: rgba(34, 0, 255, 0.0);
+    height: 100px;
+    width: 100%;
+    position: fixed;
+}
